@@ -1,0 +1,31 @@
+$success-color: #4caf50;
+$warning-color: #ff9800;
+$error-color: #f44336;
+$text-color: #fff;
+$toast-padding: 10px 20px;
+$toast-radius: 5px;
+$toast-gap: 10px;
+
+.toastContainer {
+  position: fixed;
+  display: flex;
+  gap: $toast-gap;
+  z-index: 9999;
+
+  &.top-right { top: 20px; right: 20px; flex-direction: column; }
+  &.top-left { top: 20px; left: 20px; flex-direction: column; }
+  &.bottom-right { bottom: 20px; right: 20px; flex-direction: column-reverse; }
+  &.bottom-left { bottom: 20px; left: 20px; flex-direction: column-reverse; }
+}
+
+.toast {
+  padding: $toast-padding;
+  border-radius: $toast-radius;
+  min-width: 200px;
+  color: $text-color;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+
+  &.success { background-color: $success-color; }
+  &.warning { background-color: $warning-color; }
+  &.error { background-color: $error-color; }
+}
